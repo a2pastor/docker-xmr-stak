@@ -12,4 +12,3 @@ COPY --chown=monero ./xmr-stak-rx /home/monero
 COPY --chown=monero *.txt /home/monero/
 
 CMD ./xmr-stak-rx -O ${POOL_URL} -u ${POOL_USER} -p ${POOL_PW} --currency monero
-
