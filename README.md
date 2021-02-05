@@ -16,11 +16,15 @@ docker run -idt docker-xmr-stak-rx
 takes 30 sec.
 
 Accepts ENV variables:
-- POOL_URL= Pool server, should support TLS. (e.g. pool.supportxmr.com:443)
+- POOL_URL= Pool server, should support TLS. (e.g. "-O pool.supportxmr.com:443" or "-o pool.supportxmr.com:5555")
 - POOL_USER= wallet address
 - POOL_PW= Password (only needed to identify the instance)
 
+Example with variables:
 
+```
+docker run -idt -e POOL_URL="-o pool.supportxmr.com:5555" docker-xmr-stak-rx
+```
 ## Monitor
 ```
 docker attach <container-id>
